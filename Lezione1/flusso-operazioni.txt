@@ -1,0 +1,31 @@
+
+
+var oggettoHTML = document.getElementById('attrID');
+
+var CollezioneDiTag = document.getElementsByTagName('nomeTag');
+
+Selezionare uno o più tag:
+	- aggiungo eventListener
+	- aggiungo o tolgo classi CSS
+	- modifico/sovrascrivo il contenuto
+	- recupero i valori degli attributi
+
+
+1) seleziono prima il tag
+
+// restituisce un oggetto singolo che rappresenta il tag
+var objTag = document.getElementById('attrID');
+
+// restituisce un elenco/collezione di oggetti che rappresentano
+// tutti i tag selezionati
+var objTag = document.getElementsByTagName('nomeTag');
+
+2) attribusisco un eventListener al tag che ho selezionato
+e gli dico di stare in ascolto di un evento
+che quando si verifica, deve essere gestito dalla funzione
+di callback
+
+objTag.addEventListener('nomeEvento', function(){
+	// gestisce il verificarsi dell'evento
+});
+
