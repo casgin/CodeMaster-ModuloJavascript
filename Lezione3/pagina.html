@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it_IT">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- === Includo file CSS == -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+
+    <title></title>
+
+</head>
+<body>
+    <h1>Inserisci dati di spedizione</h1>
+
+    <!-- === s:Maschera immissione dati === -->
+    <dl>
+    	
+    	<!-- s: campo -->
+    	<dt><label for="fldNome">Nome:</label></dt>
+    	<dd><input type="text" id="fldNome" name="fldNome" 
+    			size="40"></dd>
+    	<!-- e: campo -->
+
+    	<!-- s: campo -->
+    	<dt><label for="fldCognome">Cognome:</label></dt>
+    	<dd><input type="text" id="fldCognome" name="fldCognome" 
+    				size="40"></dd>
+    	<!-- e: campo -->
+
+    	<!-- s: campo -->
+    	<dt><label for="fldEmail">Email:</label></dt>
+    	<dd><input type="email" id="fldEmail" name="fldEmail" 
+    				size="30"></dd>
+    	<!-- e: campo -->
+
+    	<!-- s: campo -->
+    	<dt><label for="fldCitta">Citt&agrave; Destinazione:</label></dt>
+    	<dd>
+    		<select id="fldCitta" name="fldCitta">
+    			<option id="optMilano" value="Milano">Milano</option>
+    			<option id="optMilano" value="Pavia">Pavia</option>
+    			<option id="optBergamo" value="Bergamo">Bergamo</option>
+    			<option id="optBrescia" value="Brescia">Brescia</option>
+    			<option id="optVarese" value="Varese">Varese</option>
+    		</select>
+    	</dd>
+    	<!-- e: campo -->
+
+    </dl>
+    <button id="btnInviaDati">Invia Dati</button>
+
+    <a href="pagina2.html">pagina </a>
+
+    <!-- === Includo libreria === -->
+    <script src="js/library.js"></script>
+
+    <!-- === Includo Application Logic === -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>

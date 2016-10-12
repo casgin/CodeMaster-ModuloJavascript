@@ -18,8 +18,41 @@ function gestioneAzione1()
 
 }
 
+function gestioneAzione2()
+{
+	// application logic per azione1
+	var elencoImg = document.getElementsByTagName('img');
 
+	// Creo una variabile che conterrà l'output HTML
+	// da inserire dentro il div.message
+	var output = '';
 
+	for(var i=0; i<elencoImg.length; i++)
+	{
+		// Recupero un tag "img" dalla collection	
+		var tagIMG_singolo = elencoImg[i];	
+
+		// Creo in modo "incrementale" una stringa che contiene
+		// l'output
+		output += '<br/>' 
+				+ tagIMG_singolo
+						.getAttribute('alt')	// recupero attributo "alt"
+						.toUpperCase();			// lo converto in MAIUSCOLO
+
+	}
+
+	// Inserisco il contenuto di output dentro il div
+	document.getElementById('message').innerHTML = output;
+
+}
+
+function gestioneAzione3()
+{
+	var elencoImg = document.getElementsByTagName('img');
+	elencoImg[2].classList.add('bordered');
+	elencoImg[6].classList.add('bordered');
+
+}
 
 function entryPoint()
 {
@@ -27,8 +60,15 @@ function entryPoint()
 	document.getElementById('btnAzione1')
 			.addEventListener('click', gestioneAzione1);
 
-}
+	// Domanda 3
+	document.getElementById('btnAzione2')
+			.addEventListener('click', gestioneAzione2);
 
+	// Domanda 4
+	document.getElementById('btnAzione3')
+			.addEventListener('click', gestioneAzione3);
+
+}
 
 // Domanda 1
 window.addEventListener('load', function(){
