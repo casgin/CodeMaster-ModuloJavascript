@@ -2,68 +2,45 @@
  * Business Logic
  */
 
-// Creo l'array che conterrà la lista
-var arInvitati = [];
+// Creo un'instanza dell'oggetto generico,
+// SINGLE INSTANCE
+// interno all'interprete Javascript
+// che di fatto non contiene nulla
+var anagrafica = new Object();
 
-/**
- * recuperaNominativo
- * recupera il nome inserito nella casella di testo 
- * e verifica se è popolata
- * 
- * @return string Nominativo
- */
-function recuperaNominativo(nomeCampo)
+// --- Aggiungo le proprieta (o attributi)
+anagrafica.Nome = 'Gianfranco';
+anagrafica.Cognome = 'Castro';
+anagrafica.Email = 'gianfanco.castro@gmail.com';
+
+// --- Aggiungo i metodi
+anagrafica.getNome = function()
 {
-    var Nominativo = document.getElementById(nomeCampo).value;
-
-    if(Nominativo.length <= 1 )
-    {
-        alert('Inserire un nominativo');
-        return false;
-    }
-
-    return Nominativo;
+	return this.Nome;
 }
 
-/**
- * duplicato
- * Verifica se già esiste un Nominativo nella lista (o array)
- * 
- * @param String nomeDaCercare
- * 
- * @return boolean;
- */
-function duplicato(nomeDaCercare)
+anagrafica.getNominativoComplmeto = function()
 {
-    var indice = arInvitati.indexOf(nomeDaCercare);
+	var nominativo = '';
 
-    if(indice==-1)
-    {
-        // significa che il nominativo non è presente nella lista
-        return false;
-    }
+	nominativo = this.Nome + ' - ' + this.Cognome + ' - ' 
+					+ this.Email;
 
-    // significa che il nominativo già esiste nella lista
-    return true;
+	return nominativo;				
 }
 
-/**
- * aggiungiNominativo
- * Aggiunge un Nominativo in coda alla lista
- * 
- */
-function aggiungiNominativo(nomeDaAggiungere)
+anagrafica.setNome = function(nuovoNome)
 {
-    // === Verifico che il parametro esite
-    if(typeof nomeDaAggiungere == 'undefined')
-    {
-        console.log('Nessun nominato passato');
-        return false;
-    }
-    
-    if(nomeDaAggiungere.length!=0)
-    {
-        arInvitati.push(nomeDaAggiungere);
-        return true;
-    }
+	// quando imposto un nome lo voglio già convertito in maiuscolo
+	this.Nome = nuovoNome.toUpperCase();
+}
+
+anagrafica.setCognome = function(nuovoCognome)
+{
+	this.Cognome = nuovoCognome;
+}
+
+anagrafica.sendToDatabase = function()
+{
+	
 }

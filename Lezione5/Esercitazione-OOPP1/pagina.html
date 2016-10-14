@@ -6,23 +6,21 @@
     <!-- === Includo file CSS == -->
     <link type="text/css" rel="stylesheet" href="css/style.css">
 
-    <title>Gestione Lista Invitati</title>
+
+    <title>Photo Gallery</title>
+
 </head>
 <body>
-    <h1>Gestione Lista Invitati</h1>
+    <h1>Photo Gallery</h1>
 
-    <fieldset>
-    	<legend>Inserisci nominativo</legend>
-    	<input type="text" id="fldNominativoAdd" name="fldNominativoAdd" size="30"
-    			placeholder="Inserisci un nominativo">
-    	<button id="btnAggiungi">Aggiungi</button>		
-    </fieldset>
+    <button id="btnPrevPhoto">Prev Photo</button>
+    <img id="photoContent" width="500" />
+    <button id="btnNextPhoto">Next Photo</button>
 
-    <!-- Creo dinamicamente i tag "li" -->
-    <ul id="riepilogo"></ul>
 
     <!-- === Includo libreria === -->
-    <script src="js/library.js"></script>
+    <script src="js/library.js"></script><!-- anagrafica  -->
+    <script src="js/photogallery.js"></script><!-- PhotoGallery -->
 
     <!-- === Includo Application Logic === -->
     <script src="js/app.js"></script>
