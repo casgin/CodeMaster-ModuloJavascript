@@ -41,15 +41,16 @@ window.addEventListener('load', function(){
 
 	// === Inizializziazione
 	// chiamata AJAX verso WS Rest -> array di JSON
-	PhotoGallery.setImage('foto1.jpg');
-	PhotoGallery.setImage('foto2.jpg');
-	PhotoGallery.setImage('foto3.jpg');
-	PhotoGallery.setImage('foto4.jpg');
-	PhotoGallery.setImage('foto5.jpg');
-	PhotoGallery.setImage('foto6.jpg');
-	PhotoGallery.setImage('foto7.jpg');
-	PhotoGallery.setImage('foto8.jpg');
-	PhotoGallery.setImage('foto9.jpg');
+	PhotoGallery.setFolder('media');
+	PhotoGallery.setImage('foto1.png');
+	PhotoGallery.setImage('foto2.png');
+	PhotoGallery.setImage('foto3.png');
+	PhotoGallery.setImage('foto4.png');
+	PhotoGallery.setImage('foto5.png');
+	PhotoGallery.setImage('foto6.png');
+	PhotoGallery.setImage('foto7.png');
+	PhotoGallery.setImage('foto8.png');
+	PhotoGallery.setImage('foto9.png');
 
 
 	// === Richiamo entryPoint

@@ -2,3 +2,10 @@
 body {
     font-family: Verdana, sans-serif;
 }
+
+#photoContent
+{
+	width: 300px!important;
+	height: 300px!important;
+	border: 3px solid green;
+}
