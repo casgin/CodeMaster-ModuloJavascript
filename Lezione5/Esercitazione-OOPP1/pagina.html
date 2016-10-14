@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it_IT">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- === Includo file CSS == -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <title>Gestione Lista Invitati</title>
+</head>
+<body>
+    <h1>Gestione Lista Invitati</h1>
+
+    <fieldset>
+    	<legend>Inserisci nominativo</legend>
+    	<input type="text" id="fldNominativoAdd" name="fldNominativoAdd" size="30"
+    			placeholder="Inserisci un nominativo">
+    	<button id="btnAggiungi">Aggiungi</button>		
+    </fieldset>
+
+    <!-- Creo dinamicamente i tag "li" -->
+    <ul id="riepilogo"></ul>
+
+    <!-- === Includo libreria === -->
+    <script src="js/library.js"></script>
+
+    <!-- === Includo Application Logic === -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
